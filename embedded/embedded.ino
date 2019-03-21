@@ -6,7 +6,7 @@
 
 #include <ArduinoJson.h>
 
-#define IP "http://192.168.43.251:3001/api/newreading"
+#define IP "server local ip here"
 
 ESP8266WiFiMulti WiFiMulti;
 
@@ -23,7 +23,7 @@ void setup() {
   }
 
   WiFi.mode(WIFI_STA);
-  WiFiMulti.addAP("Pixel_3", "88888888");
+  WiFiMulti.addAP("SSID", "PWORD");
 }
 
 void loop() {
@@ -32,7 +32,7 @@ void loop() {
   String output = "";
   JsonObject& data = jbuffer.createObject();
 
-  data["name"] = "Teemu";
+  data["name"] = "sensor name here";
   data["temperature"] = sensor.readTemperature();
   data["pressure"] = sensor.readPressure();
   data["humidity"] = sensor.readHumidity();

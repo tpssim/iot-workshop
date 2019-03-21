@@ -9,5 +9,9 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "start": "yarn build && node ./build"
+  },
+  "dependencies": {
+    "sql-template-strings": "^2.2.2",
+    "sqlite": "^3.0.1"
   }
 }
